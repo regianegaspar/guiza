@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@700&family=Unica+One&family=Work+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+}
+
+header{
+    align-items: center;
+    background: #393d3f;
+    color: #fdfdff;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    padding: 40px;
+}
+
+header img{
+    height: 300px;
+}
+
+h1{
+    color: #546a7b;
+    font-family: 'DynaPuff', cursive;
+    font-weight: 700;
+    font-size: 50px;
+    text-shadow: 1px 1px 1px #fdfdff;
+    animation:  animar 3s ease-in-out infinite alternate;
+}
+
+@keyframes animar {
+    0% {
+      transform: /*scale(0.9)*/ rotateX(15deg) rotateY(15deg) rotateZ(0deg);
+      color: #546a7b;
+    }
+    100% {
+      transform: /*scale(1.0)*/ rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
+      color: #fdfdff;
+    }
+  }
+
+
+header ul{
+    align-items: center;
+    display: flex;
+    gap: 30px;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+.contatos a {
+    color: #fdfdff;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 1s;
+    text-decoration: none;
+}
+
+.contatos a:hover {
+    background: #546a7b;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+main{
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.sobre{
+    padding: 30px 10px;
+    text-align: center;
+}
+
+h2{
+    font-family: 'DynaPuff', cursive;
+    font-size: 40px;
+}
+
+h3{
+    font-family: 'Unica One', cursive;
+    font-size: 32px;
+}
+
+.experiencias, .producoes{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 30px 10px;
+}
+
+.experiencia{
+    display: flex;
+    gap: 40px;
+}
+
+.experiencia img, .producao img{
+    border-radius: 40px;
+    height: 200px;
+}
+
+.producao{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+}
+
+.formacoes{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.formacao{
+    border: 1px solid #393d3f;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 300px;
+}
+
+.descricao span{
+    color: #546a7b;
+}
+
+@keyframes brilhar {
+    0%{
+        color: #fdfdff;
+    }
+    10%, 90%{
+        color: #546a7b;
+    }
+}
+
+@media screen and (min-width:800px){
+    header{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
